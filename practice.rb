@@ -27,3 +27,13 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+
+# index = 0
+# status = blockchain[index]
+# for status in blockchain
+#   puts " #{status["from_user"]}'s KelloggCoin balance is #{status["amount"]}!"
+# end
+
+puts blockchain["amount"]
+
