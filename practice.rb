@@ -29,11 +29,43 @@ blockchain = [
 # 👇👇👇 Your code HERE 👇👇👇
 
 
-# index = 0
-# status = blockchain[index]
-# for status in blockchain
-#   puts " #{status["from_user"]}'s KelloggCoin balance is #{status["amount"]}!"
-# end
+ben_balance = 0
+brian_balance = 0
+evan_balance = 0
+anthony_balance = 0
 
-puts blockchain["amount"]
+
+for transaction in blockchain
+  if transaction["to_user"] == "ben"
+    ben_balance = ben_balance + transaction["amount"]  
+  elsif transaction["from_user"] == "ben"
+    ben_balance = ben_balance - transaction["amount"] 
+  end 
+  if transaction["to_user"] == "brian"
+    brian_balance = brian_balance + transaction["amount"]  
+  elsif transaction["from_user"] == "brian"
+    brian_balance = brian_balance - transaction["amount"] 
+  end
+  if transaction["to_user"] == "evan"
+    evan_balance = evan_balance + transaction["amount"]  
+  elsif transaction["from_user"] == "evan"
+    evan_balance = evan_balance - transaction["amount"] 
+  end
+  if transaction["to_user"] == "anthony"
+    anthony_balance = anthony_balance + transaction["amount"]  
+  elsif transaction["from_user"] == "anthony"
+    anthony_balance = anthony_balance - transaction["amount"] 
+  end
+end
+
+# puts ben_balance
+# puts brian_balance
+# puts evan_balance 
+# puts anthony_balance
+
+puts "Ben's KelloggCoin balance is #{ben_balance}!"
+puts "Brian's KelloggCoin balance is #{brian_balance}!"
+puts "Evan's KelloggCoin balance is #{evan_balance}!"
+puts "Anthony's KelloggCoin balance is #{anthony_balance}!"
+
 
